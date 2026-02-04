@@ -149,6 +149,6 @@ footer {
     justify-content: center;
     align-items: center;
     height: 4em;
-    background-color: black;
+    background-color: rgb(238, 255, 0);
     border-top: 1px solid white;
 }
