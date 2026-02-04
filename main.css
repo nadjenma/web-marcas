@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'Tomorrow-Regular';
+    src: url("fonts/Tomorrow-Regular.ttf") format("truetype");
+}
+
+body {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    font-family: 'Tomorrow-Regular', sans-serif;
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2)), url(public/header_bckimg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Subbar Styles */
+
+#subbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 1em;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, black 90%, transparent 100%);
+    z-index: 100;
+}
+
+#imgspace {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    height: 4em;
+}
+
+#menuheader {
+    display: flex;
+    flex-grow: 2;
+    justify-content: space-around;
+}
+
+.menubutton {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s, background-color 0.3s, clip-path 0.3s;
+    clip-path: polygon(0 0, 20% 0, 20% 100%, 0 100%);
+    padding: 0.5em 1em;
+}
+
+.menubutton:hover {
+    color: black;
+    background-color: yellow;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+#searchbar {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    height: 1.5em;
+}
+
+#searchbar input {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    font-family: 'Tomorrow-Regular', sans-serif;
+    padding: 0.5em;
+}
+
+/* Section 1 Styles */
+
+.yfocus {
+    font-weight: bold;
+    color: black;
+    text-shadow: -1px -1px 0 yellow, 1px -1px 0 yellow, -1px 1px 0 yellow, 1px 1px 0 yellow, -2px 0 0 yellow, 2px 0 0 yellow, 0 -2px 0 yellow, 0 2px 0 yellow;
+}
+
+.rfocus {
+    font-weight: bold;
+    color: black;
+    text-shadow: -1px -1px 0 red, 1px -1px 0 red, -1px 1px 0 red, 1px 1px 0 red, -2px 0 0 red, 2px 0 0 red, 0 -2px 0 red, 0 2px 0 red;
+}
+
+.ofocus {
+    font-weight: bold;
+    color: black;
+    text-shadow: -1px -1px 0 orange, 1px -1px 0 orange, -1px 1px 0 orange, 1px 1px 0 orange, -2px 0 0 orange, 2px 0 0 orange, 0 -2px 0 orange, 0 2px 0 orange;
+}
+
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    animation: scroll 120s linear infinite;
+}
+
+.carousel-image {
+    min-width: 200px;
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-4400px);
+    }
+
+    100% {
+        transform: translateX(-8800px);
+    }
+}
+
+.clipped-image {
+    max-width: 200px;
+    margin: 1em 1em 1em 0;
+    clip-path: polygon(20px 0%, calc(100% - 20px) 0%, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0% calc(100% - 20px), 0% 20px);
+    float: left;
+}
+
+.clipped-image:nth-of-type(2) {
+    float: right;
+    margin: 1em 0 1em 1em;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4em;
+    background-color: black;
+    border-top: 1px solid white;
+}
